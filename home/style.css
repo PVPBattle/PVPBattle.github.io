@@ -10,7 +10,6 @@
     font-display: swap;
 }
 
-
 :root {
     --bg: #050914;
     --bg-soft: #080e1c;
@@ -29,16 +28,13 @@
     --max-width: 1120px;
 }
 
-
 * {
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     margin: 0;
@@ -62,7 +58,6 @@ body {
 
     overflow-x: hidden;
 }
-
 
 body::before {
     content: "";
@@ -93,12 +88,10 @@ body::before {
     z-index: -1;
 }
 
-
 a {
     color: inherit;
     text-decoration: none;
 }
-
 
 img {
     display: block;
@@ -124,7 +117,6 @@ img {
     -webkit-backdrop-filter: blur(16px);
 }
 
-
 .main-nav {
     width: min(var(--max-width), calc(100% - 32px));
     min-height: 72px;
@@ -138,7 +130,6 @@ img {
     gap: 14px;
 }
 
-
 .nav-side {
     min-width: 0;
 
@@ -147,16 +138,13 @@ img {
     gap: 4px;
 }
 
-
 .nav-left {
     justify-content: flex-end;
 }
 
-
 .nav-right {
     justify-content: flex-start;
 }
-
 
 .nav-link {
     flex: 0 0 auto;
@@ -177,17 +165,14 @@ img {
         background 0.2s ease;
 }
 
-
 .nav-link:hover {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.06);
 }
 
-
 .nav-link.active {
     color: #ffffff;
 }
-
 
 .nav-logo {
     width: 138px;
@@ -201,7 +186,6 @@ img {
 
     border-radius: 8px;
 }
-
 
 .nav-logo img {
     width: 116px;
@@ -229,7 +213,6 @@ img {
     text-align: center;
 }
 
-
 .hero::before {
     content: "";
 
@@ -252,7 +235,6 @@ img {
     pointer-events: none;
 }
 
-
 .hero-inner {
     position: relative;
     z-index: 1;
@@ -260,7 +242,6 @@ img {
     width: 100%;
     max-width: 850px;
 }
-
 
 .hero-label,
 .section-heading > span,
@@ -272,7 +253,6 @@ img {
     letter-spacing: 0.08em;
 }
 
-
 .hero-label {
     margin-bottom: 22px;
 
@@ -280,7 +260,6 @@ img {
 
     font-size: 12px;
 }
-
 
 .hero h1 {
     margin: 0;
@@ -305,7 +284,6 @@ img {
         0 0 50px rgba(80, 135, 255, 0.12);
 }
 
-
 .hero-text {
     max-width: 680px;
 
@@ -316,7 +294,6 @@ img {
     font-size: 15px;
     line-height: 2;
 }
-
 
 .hero-actions {
     margin-top: 34px;
@@ -354,11 +331,9 @@ img {
         background 0.2s ease;
 }
 
-
 .button:hover {
     transform: translateY(-2px);
 }
-
 
 .button-primary {
     color: #ffffff;
@@ -375,7 +350,6 @@ img {
         0 8px 28px rgba(45, 104, 220, 0.18);
 }
 
-
 .button-secondary {
     color: #dce5f7;
 
@@ -383,7 +357,6 @@ img {
 
     border: 1px solid var(--line-strong);
 }
-
 
 .button-secondary:hover {
     background: rgba(255, 255, 255, 0.07);
@@ -402,11 +375,9 @@ img {
     padding: 100px 0;
 }
 
-
 .section-heading {
     margin-bottom: 16px;
 }
-
 
 .section-heading > span {
     display: block;
@@ -418,7 +389,6 @@ img {
     font-size: 10px;
 }
 
-
 .section-heading h2 {
     margin: 0;
 
@@ -426,7 +396,6 @@ img {
     font-size: clamp(25px, 4vw, 36px);
     line-height: 1.25;
 }
-
 
 .section-description {
     max-width: 720px;
@@ -451,7 +420,6 @@ img {
 
     gap: 12px;
 }
-
 
 .feature-card {
     position: relative;
@@ -479,7 +447,6 @@ img {
         background 0.2s ease;
 }
 
-
 .feature-card::after {
     content: "";
 
@@ -496,7 +463,6 @@ img {
     border-radius: 50%;
 }
 
-
 .feature-card:hover {
     transform: translateY(-4px);
 
@@ -510,7 +476,6 @@ img {
         );
 }
 
-
 .feature-number {
     margin-bottom: 25px;
 
@@ -520,14 +485,12 @@ img {
     font-size: 11px;
 }
 
-
 .feature-card h3 {
     margin: 0 0 10px;
 
     font-family: "MinecraftCustom", monospace;
     font-size: 16px;
 }
-
 
 .feature-card p {
     margin: 0;
@@ -551,7 +514,6 @@ img {
     gap: 12px;
 }
 
-
 .kit-card {
     min-width: 0;
 
@@ -571,7 +533,6 @@ img {
         background 0.2s ease;
 }
 
-
 .kit-card:hover {
     transform: translateY(-4px);
 
@@ -579,7 +540,6 @@ img {
 
     background: rgba(60, 103, 180, 0.07);
 }
-
 
 .kit-image {
     width: 72px;
@@ -592,7 +552,6 @@ img {
     justify-content: center;
 }
 
-
 .kit-image img {
     width: 64px;
     height: 64px;
@@ -604,7 +563,6 @@ img {
     filter:
         drop-shadow(0 7px 14px rgba(0, 0, 0, 0.4));
 }
-
 
 .kit-card h3 {
     margin: 0;
@@ -642,7 +600,6 @@ img {
     overflow: hidden;
 }
 
-
 .tier-preview::before {
     content: "";
 
@@ -663,14 +620,12 @@ img {
     );
 }
 
-
 .tier-preview-content {
     position: relative;
     z-index: 2;
 
     max-width: 650px;
 }
-
 
 .tier-preview-label {
     margin-bottom: 12px;
@@ -680,14 +635,12 @@ img {
     font-size: 10px;
 }
 
-
 .tier-preview h3 {
     margin: 0 0 12px;
 
     font-family: "MinecraftCustom", monospace;
     font-size: 25px;
 }
-
 
 .tier-preview p {
     margin: 0 0 24px;
@@ -697,7 +650,6 @@ img {
     font-size: 13px;
     line-height: 1.8;
 }
-
 
 .tier-preview-mark {
     position: absolute;
@@ -729,7 +681,6 @@ img {
     text-align: center;
 }
 
-
 .status-label {
     margin-bottom: 12px;
 
@@ -738,14 +689,12 @@ img {
     font-size: 10px;
 }
 
-
 .status-value {
     font-family: "MinecraftCustom", monospace;
     font-size: clamp(26px, 5vw, 42px);
 
     color: #ffffff;
 }
-
 
 .status-card p {
     margin: 16px 0 0;
@@ -776,14 +725,12 @@ img {
     border-radius: 10px;
 }
 
-
 .server-status {
     margin-top: 8px;
 
     font-family: "MinecraftCustom", monospace;
     font-size: 28px;
 }
-
 
 .server-location {
     display: flex;
@@ -793,7 +740,6 @@ img {
     gap: 6px;
 }
 
-
 .server-location span {
     color: var(--muted);
 
@@ -801,7 +747,6 @@ img {
     font-size: 9px;
     letter-spacing: 0.08em;
 }
-
 
 .server-location strong {
     font-family: "MinecraftCustom", monospace;
@@ -834,7 +779,6 @@ img {
     border-radius: 10px;
 }
 
-
 .link-label {
     margin-bottom: 9px;
 
@@ -843,14 +787,12 @@ img {
     font-size: 9px;
 }
 
-
 .link-content h3 {
     margin: 0 0 8px;
 
     font-family: "MinecraftCustom", monospace;
     font-size: 18px;
 }
-
 
 .link-content p {
     margin: 0;
@@ -876,7 +818,6 @@ img {
 
     text-align: center;
 }
-
 
 .site-footer p {
     margin: 0;
@@ -927,7 +868,6 @@ img {
         position: relative;
     }
 
-
     .main-nav {
         width: calc(100% - 20px);
 
@@ -940,18 +880,15 @@ img {
         gap: 4px;
     }
 
-
     .nav-side {
         gap: 0;
     }
-
 
     .nav-link {
         padding: 7px 5px;
 
         font-size: 9px;
     }
-
 
     .nav-logo {
         width: 92px;
@@ -960,12 +897,10 @@ img {
         padding: 4px;
     }
 
-
     .nav-logo img {
         width: 82px;
         max-height: 38px;
     }
-
 
     .hero {
         min-height: 530px;
@@ -973,16 +908,13 @@ img {
         padding: 80px 18px;
     }
 
-
     .hero-label {
         font-size: 9px;
     }
 
-
     .hero-text {
         font-size: 13px;
     }
-
 
     .section {
         width: calc(100% - 28px);
@@ -990,23 +922,19 @@ img {
         padding: 75px 0;
     }
 
-
     .feature-grid {
         grid-template-columns: 1fr;
     }
 
-
     .kit-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
 
     .tier-preview {
         padding: 28px;
 
         min-height: 300px;
     }
-
 
     .tier-preview-mark {
         right: 15px;
@@ -1015,18 +943,15 @@ img {
         font-size: 70px;
     }
 
-
     .server-card,
     .link-card {
         align-items: flex-start;
         flex-direction: column;
     }
 
-
     .server-location {
         align-items: flex-start;
     }
-
 
     .site-footer {
         width: calc(100% - 28px);
@@ -1046,45 +971,37 @@ img {
         gap: 2px;
     }
 
-
     .nav-link {
         padding: 6px 3px;
 
         font-size: 8px;
     }
 
-
     .nav-logo {
         width: 76px;
     }
 
-
     .nav-logo img {
         width: 70px;
     }
-
 
     .hero {
         padding-top: 65px;
         padding-bottom: 75px;
     }
 
-
     .hero h1 {
         font-size: 44px;
     }
-
 
     .hero-text {
         font-size: 12px;
         line-height: 1.8;
     }
 
-
     .button {
         width: 100%;
     }
-
 
     .hero-actions {
         width: 100%;
@@ -1094,28 +1011,23 @@ img {
         margin-right: auto;
     }
 
-
     .section-heading h2 {
         font-size: 25px;
     }
 
-
     .kit-card {
         padding: 18px 10px;
     }
-
 
     .kit-image {
         width: 60px;
         height: 60px;
     }
 
-
     .kit-image img {
         width: 54px;
         height: 54px;
     }
-
 
     .server-card,
     .link-card,
