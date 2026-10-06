@@ -1,32 +1,35 @@
-/* ========================================
-   PVPBattles Home
-   ======================================== */
-
-
-/* ---------- Fonts ---------- */
-
 @font-face {
     font-family: "MinecraftCustom";
-    src:
-        url("../assets/fonts/minecraft_font.ttf?v=20260913")
+    src: url("../assets/fonts/minecraft_font.ttf")
         format("truetype");
-    font-weight: normal;
-    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: "UnifontJP";
-    src:
-        url("../assets/fonts/unifont_jp-16.0.02.otf?v=20260913")
+    src: url("../assets/fonts/unifont_jp-16.0.02.otf")
         format("opentype");
-    font-weight: normal;
-    font-style: normal;
     font-display: swap;
 }
 
 
-/* ---------- Reset ---------- */
+:root {
+    --bg: #050713;
+    --panel: #0b1020;
+    --panel2: #0e1528;
+
+    --line: rgba(255, 255, 255, 0.09);
+
+    --muted: #8793aa;
+
+    --blue: #55c0ff;
+    --blue2: #3a7be0;
+}
+
+
+/* =========================
+   RESET
+========================= */
 
 * {
     box-sizing: border-box;
@@ -40,15 +43,20 @@ body {
     margin: 0;
     min-width: 320px;
 
+    color: #f4f7ff;
+
     background:
         radial-gradient(
-            circle at top,
-            rgba(38, 76, 120, 0.20),
-            transparent 45%
+            circle at 50% -10%,
+            rgba(72, 0, 255, 0.22),
+            transparent 34rem
         ),
-        #050713;
-
-    color: #ffffff;
+        radial-gradient(
+            circle at 90% 40%,
+            rgba(55, 150, 255, 0.08),
+            transparent 28rem
+        ),
+        var(--bg);
 
     font-family:
         "MinecraftCustom",
@@ -58,696 +66,688 @@ body {
     line-height: 1.7;
 }
 
-body,
-button,
-a,
-input,
-textarea,
-select {
-    font-family:
-        "MinecraftCustom",
-        "UnifontJP",
-        sans-serif;
-}
-
-img {
-    max-width: 100%;
-}
-
-button {
-    font: inherit;
-}
-
 a {
     color: inherit;
 }
 
 
-/* ---------- Header ---------- */
+/* =========================
+   HEADER
+========================= */
 
 .site-header {
-    position: relative;
-    z-index: 10;
+    position: sticky;
+    top: 0;
+    z-index: 20;
 
-    padding: 18px 16px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    text-align: center;
+    gap: 30px;
 
-    background: rgba(5, 7, 19, 0.94);
+    padding:
+        12px
+        clamp(18px, 5vw, 70px);
+
+    background: rgba(5, 7, 19, 0.84);
 
     border-bottom:
-        1px solid rgba(255, 255, 255, 0.08);
+        1px solid var(--line);
+
+    backdrop-filter: blur(16px);
 }
 
-.header-logo-link {
+
+.brand img {
     display: block;
 
-    width: fit-content;
-
-    margin:
-        0 auto 12px;
-}
-
-.header-logo {
-    display: block;
-
-    width: 170px;
+    width: 150px;
     height: auto;
 }
 
 
-/* ---------- Navigation ---------- */
+/* =========================
+   NAVIGATION
+========================= */
 
-.navbar {
+nav {
     display: flex;
 
-    justify-content: center;
     align-items: center;
 
-    flex-wrap: wrap;
+    gap: 4px;
 
-    gap: 2px;
+    flex-wrap: wrap;
 }
 
-.navbar a {
-    position: relative;
-
+nav a {
     padding: 8px 13px;
 
-    color: #9da8bd;
+    color: #929db3;
 
     text-decoration: none;
 
-    font-size: 13px;
-
     border-radius: 7px;
+
+    font-size: 13px;
 
     transition:
         color 0.2s ease,
         background 0.2s ease;
 }
 
-.navbar a:hover,
-.navbar a.active {
+nav a:hover,
+nav a.active {
     color: #ffffff;
 
     background:
         rgba(85, 192, 255, 0.10);
 }
 
-.navbar a + a::before {
-    content: "｜";
 
-    position: absolute;
-
-    left: -3px;
-
-    color: #344056;
-
-    pointer-events: none;
-}
-
-
-/* ---------- Main ---------- */
+/* =========================
+   MAIN
+========================= */
 
 main {
-    overflow: hidden;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding:
+        0 22px;
 }
 
 
-/* ---------- Hero ---------- */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     position: relative;
 
-    min-height: 560px;
+    min-height: 600px;
 
-    display: flex;
+    display: grid;
 
-    justify-content: center;
-    align-items: center;
-
-    padding: 90px 20px 100px;
+    place-items: center;
 
     text-align: center;
+
+    overflow: hidden;
 }
+
+
+.hero-glow {
+    position: absolute;
+
+    width: 560px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(55, 100, 255, 0.14);
+
+    filter: blur(80px);
+}
+
 
 .hero-content {
-    width: min(900px, 100%);
+    position: relative;
+
+    z-index: 1;
 }
 
-.eyebrow,
-.section-label {
-    margin: 0 0 14px;
 
-    color: #55c0ff;
+.eyebrow {
+    color: var(--blue);
 
     font-size: 12px;
 
-    letter-spacing: 0.12em;
+    letter-spacing: 2px;
 }
+
 
 .hero h1 {
-    margin: 0;
+    margin:
+        10px 0 8px;
 
     font-size:
-        clamp(42px, 8vw, 82px);
+        clamp(48px, 9vw, 92px);
 
-    line-height: 1.15;
+    line-height: 1.05;
 
-    letter-spacing: 0.02em;
+    letter-spacing: 1px;
 
     text-shadow:
-        0 5px 25px rgba(0, 0, 0, 0.45);
+        0 0 35px
+        rgba(85, 192, 255, 0.18);
 }
 
-.hero-description {
-    max-width: 700px;
 
-    margin: 24px auto 0;
+.hero p {
+    max-width: 650px;
+
+    margin:
+        0 auto;
 
     color: #aeb8ca;
 
-    font-size: 15px;
+    font-family:
+        "UnifontJP",
+        "MinecraftCustom",
+        sans-serif;
 }
 
 
-/* ---------- Buttons ---------- */
+/* =========================
+   BUTTONS
+========================= */
 
-.hero-buttons {
+.actions {
     display: flex;
 
     justify-content: center;
-    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 30px;
 
     flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 34px;
 }
 
-.button {
-    display: inline-flex;
 
-    justify-content: center;
-    align-items: center;
+.btn {
+    padding:
+        11px 20px;
 
-    min-height: 44px;
+    border:
+        1px solid var(--line);
 
-    padding: 10px 20px;
-
-    border-radius: 8px;
+    border-radius: 7px;
 
     text-decoration: none;
 
     font-size: 13px;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
 }
 
-.button:hover {
-    transform: translateY(-2px);
-}
 
-.button-primary {
+.btn.primary {
     color: #ffffff;
+
+    border: 0;
 
     background:
         linear-gradient(
             135deg,
-            #3aa7e0,
+            #3a7be0,
             #55c0ff
         );
-
-    border:
-        1px solid rgba(255, 255, 255, 0.15);
-
-    box-shadow:
-        0 8px 25px rgba(35, 145, 205, 0.18);
-}
-
-.button-disabled {
-    color: #69758a;
-
-    background: #111827;
-
-    border:
-        1px solid rgba(255, 255, 255, 0.08);
-
-    cursor: not-allowed;
-
-    opacity: 0.65;
-}
-
-.button-disabled:hover {
-    transform: none;
 }
 
 
-/* ---------- Sections ---------- */
+.btn.secondary {
+    background:
+        #0b1020;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
-    width: min(1120px, calc(100% - 32px));
-
-    margin: 0 auto;
-
-    padding: 90px 0;
+    padding:
+        70px 0;
 }
 
-.section-heading {
-    max-width: 720px;
 
+.section-top {
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 22px;
+}
+
+
+.section h2 {
     margin:
-        0 auto 42px;
+        5px 0 0;
 
-    text-align: center;
-}
-
-.section-heading h2 {
-    margin: 0;
-
-    font-size:
-        clamp(28px, 5vw, 44px);
-
-    line-height: 1.25;
-}
-
-.section-heading > p:last-child {
-    margin-top: 14px;
-
-    color: #8995aa;
-
-    font-size: 14px;
+    font-size: 27px;
 }
 
 
-/* ---------- Features ---------- */
+.section-note {
+    color: var(--muted);
 
-.feature-grid {
+    font-family:
+        "UnifontJP",
+        "MinecraftCustom",
+        sans-serif;
+}
+
+
+.kicker {
+    color: var(--blue);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+.text-link {
+    color: #8edbff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
     display: grid;
 
     grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+        repeat(3, 1fr);
 
-    gap: 16px;
-}
-
-.feature-card {
-    padding: 26px;
-
-    background:
-        rgba(14, 20, 37, 0.82);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.07);
-
-    border-radius: 12px;
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-3px);
-
-    border-color:
-        rgba(85, 192, 255, 0.25);
-}
-
-.feature-card h3 {
-    margin: 0;
-
-    font-size: 17px;
-}
-
-.feature-card p {
-    margin: 12px 0 0;
-
-    color: #8f9bb0;
-
-    font-size: 13px;
+    gap: 12px;
 }
 
 
-/* ---------- TierList ---------- */
-
-.tier-preview-card {
-    max-width: 760px;
-
-    margin: 0 auto;
-
-    padding: 24px;
-
-    background:
-        rgba(14, 20, 37, 0.82);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.07);
-
-    border-radius: 12px;
-}
-
-.tier-list {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 8px;
-}
-
-.tier-row {
-    display: flex;
-
-    align-items: center;
-
-    min-height: 48px;
-
-    gap: 14px;
-
-    color: #aab5c7;
-
-    font-size: 13px;
-}
-
-.tier {
-    display: inline-flex;
-
-    justify-content: center;
-    align-items: center;
-
-    width: 54px;
-    height: 40px;
-
-    flex-shrink: 0;
-
-    border-radius: 6px;
-
-    color: #ffffff;
-
-    font-size: 12px;
-}
-
-.ht1 {
-    background: #e34d5b;
-}
-
-.ht2 {
-    background: #e87545;
-}
-
-.ht3 {
-    background: #e7a33e;
-}
-
-.ht4 {
-    background: #56a85a;
-}
-
-.ht5 {
-    background: #4389d2;
-}
-
-.lt5 {
-    background: #707b8f;
-}
-
-.tier-button {
-    margin-top: 24px;
-}
-
-
-/* ---------- Server ---------- */
-
-.server-section {
-    padding-top: 50px;
-}
-
-.server-card {
-    padding: 48px 30px;
-
-    text-align: center;
+.stats article,
+.panel {
+    padding: 22px;
 
     background:
         linear-gradient(
-            135deg,
-            rgba(16, 27, 49, 0.95),
-            rgba(9, 15, 30, 0.95)
+            145deg,
+            rgba(14, 21, 40, 0.94),
+            rgba(8, 12, 25, 0.94)
         );
 
     border:
-        1px solid rgba(85, 192, 255, 0.12);
+        1px solid var(--line);
 
-    border-radius: 14px;
+    border-radius: 10px;
 }
 
-.server-card h2 {
-    margin: 0;
 
-    font-size:
-        clamp(28px, 5vw, 42px);
-}
+.stats span {
+    display: block;
 
-.server-card > p:not(.section-label) {
-    margin: 14px auto 0;
-
-    max-width: 600px;
-
-    color: #8f9bb0;
-
-    font-size: 14px;
-}
-
-.server-status {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 9px;
-
-    margin-top: 24px;
-
-    color: #8995aa;
+    color: var(--muted);
 
     font-size: 11px;
 
-    letter-spacing: 0.08em;
+    letter-spacing: 1.5px;
 }
 
-.status-dot {
-    width: 8px;
-    height: 8px;
+
+.stats strong {
+    display: block;
+
+    margin:
+        7px 0;
+
+    font-size: 23px;
+}
+
+
+.stats small {
+    color: #748097;
+
+    font-family:
+        "UnifontJP",
+        "MinecraftCustom",
+        sans-serif;
+}
+
+
+/* =========================
+   TIERLIST
+========================= */
+
+.tier-board {
+    border-top:
+        1px solid var(--line);
+}
+
+
+.tier-row {
+    display: grid;
+
+    grid-template-columns:
+        85px 1fr 90px;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+        14px 18px;
+
+    border:
+        1px solid var(--line);
+
+    border-top: 0;
+
+    background:
+        rgba(10, 15, 29, 0.75);
+}
+
+
+.tier-row b {
+    font-size: 18px;
+}
+
+
+.tier-row span {
+    color: #aab4c6;
+
+    font-family:
+        "UnifontJP",
+        "MinecraftCustom",
+        sans-serif;
+}
+
+
+.tier-row em {
+    color: #8995ab;
+
+    text-align: right;
+
+    font-size: 10px;
+
+    font-style: normal;
+}
+
+
+.ht1 b {
+    color: #e34d5b;
+}
+
+.ht2 b {
+    color: #e87545;
+}
+
+.ht3 b {
+    color: #e7a33e;
+}
+
+.ht4 b {
+    color: #56a85a;
+}
+
+.ht5 b {
+    color: #4389d2;
+}
+
+.lt5 b {
+    color: #8994a8;
+}
+
+
+/* =========================
+   NEWS / SERVER
+========================= */
+
+.split {
+    display: grid;
+
+    grid-template-columns:
+        1.35fr 0.9fr;
+
+    gap: 14px;
+}
+
+
+.panel-head {
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+
+.panel-head h2 {
+    margin:
+        4px 0 0;
+}
+
+
+.news-item {
+    display: flex;
+
+    gap: 18px;
+
+    padding:
+        16px 0;
+
+    border-top:
+        1px solid var(--line);
+}
+
+
+.date {
+    min-width: 45px;
+
+    color: var(--blue);
+
+    font-size: 11px;
+}
+
+
+.news-item strong {
+    font-size: 15px;
+}
+
+
+.news-item p {
+    margin:
+        3px 0 0;
+
+    color: #9da8bb;
+
+    font-family:
+        "UnifontJP",
+        "MinecraftCustom",
+        sans-serif;
+}
+
+
+.server p {
+    color: #9da8bb;
+
+    font-family:
+        "UnifontJP",
+        "MinecraftCustom",
+        sans-serif;
+}
+
+
+.server-status {
+    margin-top: 25px;
+
+    padding: 12px;
+
+    color: #cbd4e3;
+
+    border:
+        1px solid var(--line);
+
+    border-radius: 7px;
+
+    font-size: 11px;
+}
+
+
+.server-status i {
+    display: inline-block;
+
+    width: 7px;
+    height: 7px;
+
+    margin-right: 7px;
 
     border-radius: 50%;
 
-    background: #687386;
-
-    box-shadow:
-        0 0 10px rgba(104, 115, 134, 0.45);
+    background: #e7a33e;
 }
 
 
-/* ---------- Support ---------- */
+.server-status span {
+    float: right;
 
-.support-section {
-    padding-top: 40px;
+    color: #7e8ba2;
 }
 
-.support-card {
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
     display: flex;
 
     justify-content: space-between;
-    align-items: center;
 
-    gap: 30px;
+    gap: 20px;
 
-    padding: 30px;
+    max-width: 1180px;
 
-    background:
-        rgba(14, 20, 37, 0.82);
+    margin:
+        30px auto 0;
 
-    border:
-        1px solid rgba(255, 255, 255, 0.07);
+    padding:
+        25px 22px;
 
-    border-radius: 12px;
-}
-
-.support-card h2 {
-    margin: 0;
-
-    font-size: 25px;
-}
-
-.support-card p:last-child {
-    margin: 8px 0 0;
-
-    color: #8995aa;
-
-    font-size: 13px;
-}
-
-
-/* ---------- Footer ---------- */
-
-.site-footer {
-    padding: 35px 16px;
-
-    text-align: center;
-
-    color: #58657a;
-
-    font-size: 11px;
+    color: #68748a;
 
     border-top:
-        1px solid rgba(255, 255, 255, 0.06);
+        1px solid var(--line);
 }
 
 
-/* ---------- Tablet ---------- */
-
-@media (max-width: 850px) {
-
-    .feature-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
+footer span {
+    color: #9ba7bb;
 }
 
 
-/* ---------- Mobile ---------- */
+footer small {
+    font-family:
+        "UnifontJP",
+        "MinecraftCustom",
+        sans-serif;
+}
 
-@media (max-width: 600px) {
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
 
     .site-header {
-        padding:
-            15px 10px 9px;
+        display: block;
+
+        text-align: center;
     }
 
-    .header-logo {
-        width: 140px;
+
+    .brand img {
+        margin: auto;
     }
 
-    .navbar {
-        gap: 0;
-    }
 
-    .navbar a {
-        padding:
-            7px 8px;
+    nav {
+        justify-content: center;
 
-        font-size: 10px;
-    }
-
-    .navbar a + a::before {
-        left: -2px;
+        margin-top: 8px;
     }
 
 
     .hero {
-        min-height: 480px;
-
-        padding:
-            70px 18px 80px;
-    }
-
-    .hero h1 {
-        font-size:
-            clamp(38px, 13vw, 58px);
-    }
-
-    .hero-description {
-        font-size: 12px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-
-        width: 100%;
-    }
-
-    .hero-buttons .button {
-        width: min(280px, 100%);
+        min-height: 500px;
     }
 
 
-    .section {
-        width:
-            calc(100% - 24px);
-
-        padding: 65px 0;
-    }
-
-    .section-heading {
-        margin-bottom: 30px;
-    }
-
-
-    .feature-grid {
+    .stats,
+    .split {
         grid-template-columns: 1fr;
     }
 
-    .feature-card {
-        padding: 22px;
+
+    .section-top {
+        display: block;
     }
 
 
-    .tier-preview-card {
-        padding: 18px;
+    .section-note {
+        margin-top: 8px;
     }
+
 
     .tier-row {
-        min-height: 44px;
-
-        font-size: 11px;
-    }
-
-    .tier {
-        width: 48px;
-        height: 36px;
+        grid-template-columns:
+            65px 1fr;
     }
 
 
-    .server-card {
-        padding:
-            38px 20px;
+    .tier-row em {
+        display: none;
     }
 
 
-    .support-card {
-        flex-direction: column;
+    footer {
+        display: block;
 
-        align-items: flex-start;
-
-        padding: 24px;
+        text-align: center;
     }
 
-    .support-card .button {
-        width: 100%;
+
+    footer small {
+        display: block;
+
+        margin-top: 8px;
     }
 
 }
 
 
-/* ---------- Very Small Screens ---------- */
+/* =========================
+   SMALL MOBILE
+========================= */
 
-@media (max-width: 380px) {
+@media (max-width: 430px) {
 
-    .navbar a {
-        padding:
-            6px 6px;
-
-        font-size: 9px;
+    .hero h1 {
+        font-size: 45px;
     }
 
-    .header-logo {
-        width: 125px;
+
+    .hero p {
+        font-size: 13px;
     }
 
-            }
+
+    .btn {
+        width: 100%;
+    }
+
+}
