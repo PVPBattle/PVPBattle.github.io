@@ -3,14 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PVPBattles | Competitive Minecraft PvP</title>
-
-    <meta
-        name="description"
-        content="PVPBattles - Competitive Minecraft PvP community."
-    >
-
+    <meta name="description" content="PVPBattles - Competitive Minecraft PvP community.">
+    <title>PVPBattles | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,22 +12,18 @@
 
 <header class="site-header">
 
-    <a href="./" class="header-logo-link">
-        <img
-            src="../assets/header.png"
-            alt="PVPBattles"
-            class="header-logo"
-        >
+    <a class="brand" href="./">
+        <img src="../assets/header.png" alt="PVPBattles">
     </a>
 
-    <nav class="navbar" aria-label="Main navigation">
-        <a href="./" class="active">Home</a>
+    <nav aria-label="Main navigation">
+        <a class="active" href="./">Home</a>
         <a href="../tierlist/">TierList</a>
         <a href="../news/">News</a>
         <a
             href="https://discord.gg/tyCm7xx4jz"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
         >
             Discord
         </a>
@@ -48,33 +38,37 @@
     <!-- HERO -->
     <section class="hero">
 
+        <div class="hero-glow"></div>
+
         <div class="hero-content">
 
-            <p class="eyebrow">
+            <div class="eyebrow">
                 COMPETITIVE MINECRAFT PVP
-            </p>
+            </div>
 
             <h1>PVPBattles</h1>
 
-            <p class="hero-description">
-                Minecraft PvPを中心とした、競技性の高いコミュニティ。<br>
-                スキル、ランキング、そして快適なPvP環境を追求します。
+            <p>
+                競技Minecraft PvPを中心としたコミュニティ。<br>
+                プレイヤーの実力、Tier、対戦をひとつの場所へ。
             </p>
 
-            <div class="hero-buttons">
-
-                <button
-                    class="button button-disabled"
-                    disabled
-                >
-                    Play Now
-                </button>
+            <div class="actions">
 
                 <a
+                    class="btn primary"
                     href="../tierlist/"
-                    class="button button-primary"
                 >
-                    TierListを見る
+                    VIEW TIERLIST
+                </a>
+
+                <a
+                    class="btn secondary"
+                    href="https://discord.gg/tyCm7xx4jz"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    JOIN DISCORD
                 </a>
 
             </div>
@@ -84,111 +78,77 @@
     </section>
 
 
-    <!-- FEATURES -->
-    <section
-        class="section features-section"
-        id="features"
-    >
+    <!-- OVERVIEW -->
+    <section class="section">
 
-        <div class="section-heading">
+        <div class="section-top">
 
-            <p class="section-label">
-                WHY PVPBATTLES
-            </p>
+            <div>
+                <span class="kicker">
+                    PVPBATTLES
+                </span>
 
-            <h2>
-                PvPのために
-            </h2>
+                <h2>
+                    Competitive PvP, simplified.
+                </h2>
+            </div>
 
-            <p>
-                競技Minecraft PvPを楽しむために必要な環境を提供します。
+            <p class="section-note">
+                PvPに必要な情報を、見やすく。
             </p>
 
         </div>
 
 
-        <div class="feature-grid">
+        <div class="stats">
 
-            <article class="feature-card">
+            <article>
 
-                <h3>
-                    Competitive PvP
-                </h3>
+                <span>
+                    SERVER
+                </span>
 
-                <p>
-                    プレイヤーの実力が重要となる、
-                    競技性の高いMinecraft PvPを目指します。
-                </p>
+                <strong>
+                    COMING SOON
+                </strong>
 
-            </article>
-
-
-            <article class="feature-card">
-
-                <h3>
-                    TierList
-                </h3>
-
-                <p>
-                    PvPの実力をもとに、LT5からHT1までの
-                    Tierでプレイヤーを評価します。
-                </p>
+                <small>
+                    Japan / Tokyo
+                </small>
 
             </article>
 
 
-            <article class="feature-card">
+            <article>
 
-                <h3>
-                    Leaderboards
-                </h3>
+                <span>
+                    TIER RANGE
+                </span>
 
-                <p>
-                    強いプレイヤーたちと競い、
-                    上位を目指しましょう。
-                </p>
+                <strong>
+                    HT1 — LT5
+                </strong>
 
-            </article>
-
-
-            <article class="feature-card">
-
-                <h3>
-                    Player Statistics
-                </h3>
-
-                <p>
-                    PvPの成績やプレイ状況を確認し、
-                    自分の成長をチェックできます。
-                </p>
+                <small>
+                    Competitive TierList
+                </small>
 
             </article>
 
 
-            <article class="feature-card">
+            <article>
 
-                <h3>
-                    Low Latency
-                </h3>
+                <span>
+                    KITS
+                </span>
 
-                <p>
-                    日本向けの低遅延な環境で、
-                    より快適なPvP体験を目指します。
-                </p>
+                <strong>
+                    08
+                </strong>
 
-            </article>
-
-
-            <article class="feature-card">
-
-                <h3>
-                    Custom UI
-                </h3>
-
-                <p>
-                    見やすく、分かりやすい
-                    カスタムUIを採用しています。
-                </p>
+                <small>
+                    Sword · Axe · UHC · Pot · Mace · EndGame · SpearMace · Bow
+                </small>
 
             </article>
 
@@ -197,156 +157,193 @@
     </section>
 
 
-    <!-- TIERLIST PREVIEW -->
-    <section class="section tier-preview">
+    <!-- TIERLIST -->
+    <section class="section">
 
-        <div class="section-heading">
+        <div class="section-top">
 
-            <p class="section-label">
-                PLAYER RANKINGS
-            </p>
+            <div>
 
-            <h2>
-                TierList
-            </h2>
+                <span class="kicker">
+                    TIERLIST
+                </span>
 
-            <p>
-                PVPBattlesのプレイヤーTierをチェックできます。
-            </p>
+                <h2>
+                    Who is at the top?
+                </h2>
+
+            </div>
+
+            <a
+                class="text-link"
+                href="../tierlist/"
+            >
+                View TierList →
+            </a>
 
         </div>
 
 
-        <div class="tier-preview-card">
+        <div class="tier-board">
 
-            <div class="tier-list">
+            <div class="tier-row ht1">
+                <b>HT1</b>
+                <span>Highest competitive tier</span>
+                <em>TOP</em>
+            </div>
 
-                <div class="tier-row">
-                    <span class="tier ht1">HT1</span>
-                    <span>Highest Tier</span>
+            <div class="tier-row ht2">
+                <b>HT2</b>
+                <span>Elite players</span>
+                <em>ELITE</em>
+            </div>
+
+            <div class="tier-row ht3">
+                <b>HT3</b>
+                <span>Strong competitors</span>
+                <em>HIGH</em>
+            </div>
+
+            <div class="tier-row ht4">
+                <b>HT4</b>
+                <span>Competitive players</span>
+                <em>SKILLED</em>
+            </div>
+
+            <div class="tier-row ht5">
+                <b>HT5</b>
+                <span>Developing competitors</span>
+                <em>ACTIVE</em>
+            </div>
+
+            <div class="tier-row lt5">
+                <b>LT5</b>
+                <span>Entry competitive tier</span>
+                <em>START</em>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEWS / SERVER -->
+    <section class="section split">
+
+        <article class="panel news">
+
+            <div class="panel-head">
+
+                <div>
+
+                    <span class="kicker">
+                        LATEST
+                    </span>
+
+                    <h2>
+                        News
+                    </h2>
+
                 </div>
 
-                <div class="tier-row">
-                    <span class="tier ht2">HT2</span>
-                    <span>High Tier</span>
-                </div>
+                <a
+                    class="text-link"
+                    href="../news/"
+                >
+                    All News →
+                </a>
 
-                <div class="tier-row">
-                    <span class="tier ht3">HT3</span>
-                    <span>High Tier</span>
-                </div>
+            </div>
 
-                <div class="tier-row">
-                    <span class="tier ht4">HT4</span>
-                    <span>High Tier</span>
-                </div>
 
-                <div class="tier-row">
-                    <span class="tier ht5">HT5</span>
-                    <span>High Tier</span>
-                </div>
+            <div class="news-item">
 
-                <div class="tier-row">
-                    <span class="tier lt5">LT5</span>
-                    <span>Low Tier</span>
+                <span class="date">
+                    2026
+                </span>
+
+                <div>
+
+                    <strong>
+                        PVPBattles
+                    </strong>
+
+                    <p>
+                        新しいPvPコミュニティを準備中。
+                    </p>
+
                 </div>
 
             </div>
 
 
-            <a
-                href="../tierlist/"
-                class="button button-primary tier-button"
-            >
-                Open TierList
-            </a>
+            <div class="news-item">
 
-        </div>
+                <span class="date">
+                    INFO
+                </span>
 
-    </section>
+                <div>
+
+                    <strong>
+                        TierList
+                    </strong>
+
+                    <p>
+                        競技PvP向けのTierListを公開。
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>
 
 
-    <!-- SERVER -->
-    <section class="section server-section">
+        <article class="panel server">
 
-        <div class="server-card">
-
-            <p class="section-label">
+            <span class="kicker">
                 SERVER
-            </p>
+            </span>
 
             <h2>
-                Coming Soon
+                PVPBattles Server
             </h2>
 
             <p>
-                PVPBattles Minecraft Serverは現在準備中です。
+                低遅延を重視した日本向けPvP環境を準備しています。
             </p>
 
             <div class="server-status">
 
-                <span class="status-dot"></span>
+                <i></i>
+
+                COMING SOON
 
                 <span>
-                    COMING SOON
+                    Japan / Tokyo
                 </span>
 
             </div>
 
-        </div>
-
-    </section>
-
-
-    <!-- DISCORD -->
-    <section class="section support-section">
-
-        <div class="support-card">
-
-            <div>
-
-                <p class="section-label">
-                    NEED HELP?
-                </p>
-
-                <h2>
-                    Discordに参加
-                </h2>
-
-                <p>
-                    最新情報を確認したり、
-                    PVPBattlesコミュニティで交流できます。
-                </p>
-
-            </div>
-
-
-            <a
-                href="https://discord.gg/tyCm7xx4jz"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button button-primary"
-            >
-                Join Discord
-            </a>
-
-        </div>
+        </article>
 
     </section>
 
 </main>
 
 
-<footer class="site-footer">
+<footer>
 
-    <p>
+    <span>
+        PVPBattles
+    </span>
+
+    <small>
         © 2026 PVPBattles. All rights reserved.
-    </p>
+    </small>
 
 </footer>
-
-
-<script src="script.js"></script>
 
 </body>
 </html>
