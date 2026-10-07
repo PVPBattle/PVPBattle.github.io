@@ -13,10 +13,6 @@
 }
 
 
-/* =========================
-   VARIABLES
-========================= */
-
 :root {
     --bg: #030611;
     --bg-light: #071020;
@@ -36,10 +32,6 @@
     --blue-bright: #2da8ff;
 }
 
-
-/* =========================
-   RESET
-========================= */
 
 * {
     box-sizing: border-box;
@@ -83,7 +75,7 @@ a {
 
 
 /* =========================
-   HEADER / NAVIGATION
+   HEADER
 ========================= */
 
 .site-header {
@@ -184,7 +176,7 @@ a {
 
 
 /* =========================
-   CENTER LOGO
+   LOGO
 ========================= */
 
 .nav-logo {
@@ -199,7 +191,8 @@ a {
     width: 145px;
     height: 58px;
 
-    padding: 5px 10px;
+    padding:
+        5px 10px;
 
     background:
         rgba(2, 5, 13, 0.96);
@@ -376,7 +369,7 @@ a {
 
 
 /* =========================
-   BUTTONS
+   BUTTON
 ========================= */
 
 .button {
@@ -746,7 +739,7 @@ a {
 }
 
 .kit-card {
-    min-height: 100px;
+    min-height: 150px;
 
     padding: 18px;
 
@@ -757,16 +750,23 @@ a {
     justify-content: space-between;
 
     background:
-        rgba(8, 16, 32, 0.86);
+        linear-gradient(
+            145deg,
+            rgba(9, 19, 38, 0.92),
+            rgba(5, 11, 23, 0.96)
+        );
 
     border:
         1px solid var(--line);
 
     border-radius: 8px;
 
+    overflow: hidden;
+
     transition:
         border-color 0.2s ease,
-        background 0.2s ease;
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 .kit-card:hover {
@@ -775,17 +775,47 @@ a {
 
     border-color:
         var(--line-blue);
+
+    transform:
+        translateY(-2px);
 }
 
-.kit-card span {
+.kit-card img {
+    display: block;
+
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    image-rendering: pixelated;
+
+    margin-bottom: 8px;
+
+    filter:
+        drop-shadow(
+            0 5px 12px
+            rgba(0, 0, 0, 0.35)
+        );
+}
+
+.kit-info {
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.kit-info span {
     color: #526681;
 
     font-size: 9px;
 }
 
-.kit-card strong {
-    margin-top: 15px;
-
+.kit-info strong {
     font-size: 17px;
 }
 
@@ -1316,12 +1346,17 @@ footer {
     }
 
     .kit-card {
-        min-height: 85px;
+        min-height: 135px;
 
         padding: 14px;
     }
 
-    .kit-card strong {
+    .kit-card img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .kit-info strong {
         font-size: 14px;
     }
 
@@ -1416,4 +1451,4 @@ footer {
         font-size: 43px;
     }
 
-    }
+}
